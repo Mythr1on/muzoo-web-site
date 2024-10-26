@@ -12,7 +12,7 @@ body{
     --color5: #148b04;
     --color6: #ffae00;
     text-align: center;
-    background: #68acc1;
+    background: #2B2D42;
 }
 p{
     margin-left: 4px;
@@ -25,7 +25,7 @@ p{
     align-items: center;
     list-style: none;
     position: relative;
-    background-color: #22676a;
+    background-color: #2F4950;
     padding: 16px 20px;
 }
 .logo2{
