@@ -1079,7 +1079,7 @@ button:hover {
 }
 @media(max-width: 600px){
     .slides{
-        height: 200px;
+        height: 300px;
     }
     .slider{
         width: 90%;
