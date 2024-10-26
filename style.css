@@ -12,7 +12,7 @@ body{
     --color5: #148b04;
     --color6: #ffae00;
     text-align: center;
-    background-color: #90de86;
+    background: #90de86;
 }
 p{
     margin-left: 4px;
