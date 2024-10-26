@@ -1000,7 +1000,7 @@ button:hover {
     }
     .cont-img img{
         height: auto;
-        width: 300px;
+        width: 450px;
     }
     .infos-animais{
         margin-left: 10px;
@@ -1011,7 +1011,7 @@ button:hover {
     }
     .sub-imgs img{
         height: auto;
-        width: 280px;
+        width: 450px;
 
     }
     .container-an{
@@ -1071,7 +1071,7 @@ button:hover {
 }
 @media(max-width: 600px){
     .slides{
-        height: 200px;
+        height: 250px;
     }
     .slider{
         width: 90%;
