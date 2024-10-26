@@ -1,0 +1,1086 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    --color1: #fff;
+    --color2: #181818;
+    --color3: #ffe921;
+    --color4: #7e0620;
+    --color5: #148b04;
+    --color6: #ffae00;
+    text-align: center;
+}
+p{
+    margin-left: 4px;
+    margin-right: 3px;
+}
+.nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: #22676a;
+    padding: 16px 20px;
+}
+.logo2{
+    display: none;
+}
+.logo img{
+    width: 100px;
+    margin-bottom: -40px;
+    margin-top: -20px;
+}
+.menu img{
+    height: 100px;
+    width: auto;
+    margin-bottom: -10px;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    padding-left: 10px;
+}
+.menu li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.menu li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after{
+    width: 100%;
+}
+.open-menu , .close-menu{
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu{
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu{
+    top: 20px;
+    right: 20px;
+}
+#check{
+    display: none;
+}
+@media(max-width:610px){
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #22676a;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li{
+        margin-top: 40px;
+    }
+    .menu-li a{
+        padding: 10px;
+    }
+    .open-menu , .close-menu{
+        display: block;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+}
+
+@media(max-width: 600px){
+    .logo2{
+        display: block;
+        margin-left: 25px;
+    }
+    
+}
+/*PAGINA DOS BIOMAS */
+.header-biomas{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4, 9, 30, 0.514)), url(imgs/biomas/biomas_banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.caixa-texto3{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #c9a710e7;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.caixa-texto5{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #1fa7b1e7;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.caixa-texto6{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #a3ca35e7;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.caixa-texto-amazonia{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #509755;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.caixa-texto-caatinga{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #ffc03f;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.caixa-texto-cerrado{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #eb9041;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.caixa-texto-pantanal{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #006c86;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.caixa-texto-mata-atlantica{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #60dbc6;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.caixa-texto-pampa{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #d4bf74;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.h5_caixa-texto{
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+    color: #ffffff;
+}
+.tabela_biomas{
+    width: 90%;
+    margin-left: 5%;
+    border-collapse: collapse;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    margin-bottom: 3%;
+}
+.tabela_biomas td, .tabela_biomas th{
+    padding: 12px 15px;
+    border: 1px solid #124605;
+    text-align: center;
+    font-size: 16px;
+}
+.tabela_biomas th{
+    background-color: #22676a;
+    color: #fff;
+}
+.tabela_biomas .th_amaz{
+    background-color: #509755;
+}
+.tabela_biomas .th_caat{
+    background-color: #ffc03f;
+}
+.tabela_biomas .th_cerr{
+    background-color: #eb9041;
+}
+.tabela_biomas .th_pant{
+    background-color: #006c86;
+}
+.tabela_biomas .th_matlan{
+    background-color: #60dbc6;
+}
+.tabela_biomas .th_pampa{
+    background-color: #d4bf74;
+}
+.tabela_biomas tr:nth-child(even){
+    background-color: #c0bdbd;
+}
+
+/*HEADER*/
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(imgs/banner_1.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+/*Pagina SOBRE*/
+
+/*INTRODUÇÃO*/
+.hr_intro{
+    height: 20px;
+    background-color: var(--color2);
+    border: solid 1px transparent;
+    box-shadow: 4px  4px 4px rgb(0, 0, 0, 0.1), 4px  4px 4px rgb(0, 0, 0, 0.1);
+}
+.hr_intro2{
+    height: 20px;
+    background-color: #124605;
+    border: solid 1px transparent;
+    box-shadow: 4px  4px 4px rgb(0, 0, 0, 0.7), 4px  4px 4px rgb(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    
+}
+.intro{
+    background-color: #ffffff;
+}
+
+.textos p{
+    font-size: 15px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+.textos h3{
+    margin-top: 30px;
+    font-size: 40px;
+    text-align: center;
+    color: var(--color4);
+    font-weight: 800;
+}
+.text-box2 h1{
+
+    margin-top: 30px;
+    font-size: 40px;
+    text-align: center;
+    color: var(--color4);
+    font-weight: 800;
+}
+.text-box2 p{
+    font-size: 15px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+.intro-btn{
+    height: 50px;
+    width: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: green;
+    border-radius: 6px;
+    color: var(--color1);
+    font-size: 15px;
+    font-weight: bold;
+    border-color: transparent;
+}
+.intro-btn a{
+    text-decoration: none;
+    color: var(--color1);
+}
+.intro-btn:hover{
+    background-color: #22676a;
+    transform: translateY(5px);
+    transition: .5s ease;
+    border: solid rgb(255, 255, 255) 2px;
+}
+.intro-btn2{
+    height: 50px;
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: green;
+    border-radius: 6px;
+    color: var(--color1);
+    font-size: 15px;
+    font-weight: bold;
+    border-color: transparent;
+}
+.intro-btn2 a{
+    text-decoration: none;
+    color: var(--color1);
+}
+.intro-btn2:hover{
+    background-color: #22676a;
+    transform: translateY(5px);
+    transition: .5s ease;
+    border: solid rgb(255, 255, 255) 2px;
+}
+/*SELETOR DAS CLASSES DOS ANIMAIS */
+.selet-animais{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+.seletor h1{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 35px;
+    color: var(--color4);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.row-img{
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 50%; 
+    cursor: pointer;
+    border: 5px solid #22676a;
+}
+.row-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.7s;
+}
+.row-img img:hover{
+    transform: scale(1.5);
+}
+.selet-animais h4{
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .50s ease;
+}
+.selet-animais h4:hover{
+    color: var(--color4);
+}
+
+/*Pag dos PEIXES*/
+.header-pxs{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.26),rgba(4, 9, 30, 0.356)), url(imgs/peixes_logo.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.text-box-pxs{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/*ANFIBIOS - PAG DOS ANFIBIOS */
+.header-anf{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.26),rgba(4, 9, 30, 0.356)), url(imgs/banner-anf.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.text-box-anf{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box-anf h1{
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.text-box-anf p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+.info h1{
+    font-size: 30px;
+    color: var(--color4);
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: 50px;   
+    margin-bottom: 20px;
+}
+.info p{
+    text-align: justify;
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.hr1{
+    height: 10px;
+    background-color: var(--color5);
+    margin-top: 20px;
+    border-color: transparent;
+}
+.container1{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 5px;
+    background-color: #d3d3d3;
+}
+.container1 hr{
+    height: 3px;
+    background-color: #181818;
+}
+.container1 h4{
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 800;
+}
+.animal-title{
+    font-size: 42px;
+    margin-top: 2rem;
+    margin-bottom: 5px;
+    color: var(--color4);
+    font-weight: 800;
+}
+.cont-img img{
+    height: auto;
+    width: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.infos-animais{
+    text-align: justify;
+    list-style: none;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+.mapa-ocorr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.mapa-ocorr b{
+    font-size: 22px;
+    font-weight: 800;
+}
+.mapa-ocorr img{
+    height: auto;
+    width: 30%;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 3px solid #22676a;
+}
+/* PAGINA DE REGISTRAR VISITA*/
+.body_v2{
+    background-image: linear-gradient(rgba(4, 9, 30, 0.432),rgba(4, 9, 30, 0.61)), url(imgs/banner_1.png);
+    background-position: center;
+    background-size: cover;
+    
+}
+.h2_form{
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    color: red;
+    text-transform: uppercase;
+}
+form {
+    max-width: 550px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(33, 5, 136, 0.404);
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #ced4da;
+    border-radius: 4px;
+}
+.btn_form {
+    background-color: #22676a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 3px solid #c71a1a;
+}
+.btn_form:hover {
+    background-color: #148b04;
+    transition: 0.5s ease;
+    transform: translateY(5px);
+    border: 3px solid #181818;
+}
+@media(max-width: 600px){
+    form {
+        max-width: 450px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(33, 5, 136, 0.404);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+    input, select, textarea {
+        width: 90%;
+        padding: 12px;
+        margin-bottom: 10px;
+        border: 2px solid #ced4da;
+        border-radius: 4px;
+    }
+}
+/*MEDIA*/
+@media(max-width: 600px){
+    .mapa-ocorr img{
+        width: 80%;
+    }
+    .sub-imgs img{
+        width: 80%;
+    }
+
+}
+.info-ant{
+    color: var(--color4);
+}
+.infos-animais h4{
+    color: var(--color5);
+}
+.sub-imgs p{
+    text-align: center;
+    font-size: 15px;
+    color: var(--color4);
+}
+.sub-imgs{
+    align-items: center;
+    text-align: center;
+}
+.sub-imgs img{
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 60%;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 4px solid rgba(43, 189, 7, 0.747);
+}
+
+/*PAG SOBRE*/
+.sub-imgs2 p{
+    text-align: center;
+    font-size: 15px;
+    color: var(--color4);
+}
+.sub-imgs2{
+    align-items: center;
+    text-align: center;
+}
+.sub-imgs2 img{
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 60%;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 4px solid rgba(43, 189, 7, 0.747);
+}
+.sub-imgs_foto{
+    text-align: center;
+}
+.sub-imgs_foto p{
+    text-align: center;
+    color: #7e0620;
+}
+.sub-imgs_foto img{
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 40%;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 4px solid rgba(43, 189, 7, 0.747);
+}
+@media(max-width: 600px){
+    .sub-imgs2 img{
+        height: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 270px;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border: 4px solid rgba(43, 189, 7, 0.747);
+    }
+    .sub-imgs_foto img{
+        height: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 320px;
+        position: relative;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border: 4px solid rgba(43, 189, 7, 0.747);
+    }
+}
+/* IMG SLIDER */
+.slider {
+    position: relative;
+    align-items: center;
+    width: 60%;
+    margin-left: 20%;   
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+    width: 100%; 
+    height: 600px;
+    position: relative;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+.slides img {
+    flex-shrink: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container1 button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*PAGINA DOS REPTEIS*/
+.header-rpts{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.145),rgba(4, 9, 30, 0.118)), url(imgs/banner_repteis.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/*PAGINA DAS AVES */
+.header-avs{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.145),rgba(4, 9, 30, 0.118)), url(imgs/Banner_aves.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.text-box-avs{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box-avs h1{
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.text-box-avs p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/*PAGINA DOS MAMIFEROS*/
+.mf-body{
+    background-image: linear-gradient(rgba(4, 9, 30, 0.123),rgba(4, 9, 30, 0.185)), url(imgs/banner-background-animais.jpg);
+}
+
+.header-mfs{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.356),rgba(4, 9, 30, 0.342)), url(imgs/Banner-mami.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.text-box-mfs{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box-mfs h1{
+    font-size: 60px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.text-box-mfs p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+/*Pagina dos Animais - CP*/
+.an-body{
+    background-image: linear-gradient(rgba(4, 9, 30, 0.116),rgba(4, 9, 30, 0.164)), url(imgs/banner-background-animais.jpg);
+}
+.container-an{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 5px;
+    background-color: #fff;
+}
+.container-an h4{
+    font-size: 20px;
+}
+.btn-vltan{
+    height: 50px;
+    width: 100px;
+    position: relative;
+    right: 10%;
+    left: -40%;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+.btn-vltan a{
+    text-decoration: none;
+    color: red;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.btn-vltan:hover{
+    transform: translateY(5px);
+    transition: 0.5s ease-in-out;
+    background-color: var(--color2);
+    border: 2px solid red;
+    border-radius: 10px;
+}
+.container-an button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.extras_info{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 5px;
+    background-color: #fff;
+}
+.extras_info h1{
+    color: var(--color4);
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.info_popup{
+    width: auto;
+    height: 40px;
+    background-color: #ffe921;
+    border: 3px solid #148b04;
+    border-radius: 5px;
+    color: black;
+    font-size: 14px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.info_popup:hover{
+    background-color: #148b04;
+    transform: translateY(10%);
+    transition: ease-in-out 0.2s;
+    border: 3px solid red;
+}
+.caixa-texto{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #47b439e7;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.caixa-texto_min{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #47b439e7;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.caixa-texto_min2{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #ffae00;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+@media(min-width: 900px){
+    .caixa-texto_min{
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #47b439e7;
+    margin-bottom: 10px;
+    text-align: justify;
+    }
+    .caixa-texto_min2{
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #ffae00;
+    margin-bottom: 10px;
+    text-align: justify;
+    }
+}
+.caixa-texto2{
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow:  0 10px 10px rgba(4,9,30,0.9);
+    border-radius: 10px;
+    background-color: #43d34fe7;
+    margin-bottom: 10px;
+}
+/*MEDIAS DE TELA - RESPONSIVIDADE */
+@media(max-width: 600px){
+    .text-box-anf h1{
+        font-size: 60px;
+    }
+    .titulos_especiais h1{
+        color: #ffae00;
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+    .text-box h1{
+        font-size: 60px;
+    }
+    .cont-img img{
+        height: auto;
+        width: 300px;
+    }
+    .infos-animais{
+        margin-left: 10px;
+    }
+    .mapa-ocorr img{
+        height: auto;
+        width: 300px;
+    }
+    .sub-imgs img{
+        height: auto;
+        width: 280px;
+
+    }
+    .container-an{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+        margin-top: 5px;
+    }
+    .slider {
+        position: relative;
+        align-items: center;
+        width: auto;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .slider img{
+        width: 100%;
+        height: auto;
+    }
+    .btn-vltan{
+        height: 50px;
+        width: 100px;
+        position: relative;
+        right: 5%;
+        left: -33%;
+        border-radius: 7px;
+    }
+    button.prev {
+        left: -5px;
+    }
+    
+    button.next {
+        right: -5px;
+    }
+}
+
+@media (max-width: 999px) and (min-width: 800px) {
+    .slides {
+        height: 30vh;
+    }
+    .slider{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+@media (max-width: 799px) and (min-width: 600px){
+    .slides{
+        height: 35vh;
+    }
+    .slider{
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+@media(max-width: 600px){
+    .slides{
+        height: 200px;
+    }
+    .slider{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+@media(min-width: 700px){
+    .cont-img img{
+        height: 300px;
+        width: auto;
+    }
+}
